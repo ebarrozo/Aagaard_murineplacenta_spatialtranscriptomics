@@ -6,7 +6,7 @@
 # Department of Obstetrics & Gynecology, Division of Maternal-Fetal Medicine
 
 ## Analyze data on AagaardLab3
-# http://10.16.5.106:8787/
+# 
 
 set.seed(seed=1)
 setwd("/home/ebarrozo/visium/results")
