@@ -5,10 +5,13 @@ Spatial transcriptomics in murine placentae. At E18.5 placentas were dissected a
 
 Spatial transcriptomics analysis. Spatial transcriptomes were aligned to a custom human and ZIKV transcriptome ( and transcripts counts were quantified using Space Ranger (v1.3.0) and bash scripts. Downstream analyses were done in R using the Seurat scRNA-seq analysis package 34. H&E slides were annotated by a trained pathologist and transferred to spatial barcodes using the Loupe Browser (v5) and spatial transcriptomes were annotated based on PCA dimension reduction and clustering analysis to identify broad cell-types. The spatial transcriptomes were then integrated with published murine single-nuclei RNA-seq (snRNA-seq) dataset to assess cell-type annotations (GEO accession GSE152248). The Marsh & Blelloch, eLife. (2020) snRNA-seq dataset included murine placentas sampled at E9.5-E14.5: E9.5, E10.5, E12.5, E14.5 across 2,933 independently filtered (nFeature_RNA > 500 & nFeature_RNA < 4000 & nCount_RNA > 500 & nCount_RNA < 10000 & percent.mt < 10 & percent.ribo < 20) high-quality transcriptomes.
 
-S07 ZIKV-Vehicle
-S09 Mock
-S12 Mock
-S13 ZIKV-Enoxacin
+SampleIDs: 
+S07-ZIKV-Vehicle
+S09-Mock
+S12-Mock
+S13-ZIKV-Enoxacin
+
+GEO Contents: Spatial transcriptomics data available at GEO Accession GSEXXXXXX. Use the 10x Genomics bam2fastq package for manual re-alignments. Processed .h5 matricies are also available. The custom mouse + ZIKV reference (mm10_and_NC_012532.1.v2) is provided.
 
 # Repository contents
 A) Images necessary for alignment of spatial transcriptomes
