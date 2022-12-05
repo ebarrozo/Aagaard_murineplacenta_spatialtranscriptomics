@@ -185,3 +185,94 @@ Outputs:
 - Spatial Enrichment using Moran's I file:  /opt/sample345/outs/spatial_enrichment.csv
  
 Pipestance completed successfully!
+
+cd
+export PATH=/home/ebarrozo/cellranger-6.1.2:$PATH
+export PATH=/home/ebarrozo/spaceranger-1.3.0:$PATH
+cd /home/ebarrozo/visium/results
+
+
+spaceranger count --id=S33-manual \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53313 \
+                   --image=/home/ebarrozo/visium/docs/33.tif \
+                   --slide=V12M21-287 \
+                   --area=C1 \
+                   --loupe-alignment=/home/ebarrozo/visium/docs/manual_image_alignments/V12M21-287-C1.json \
+                   --localcores=48 \
+                   --localmem=300
+spaceranger count --id=S31-manual \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53311 \
+                   --image=/home/ebarrozo/visium/docs/31.tif \
+                   --slide=V12M21-287 \
+                   --area=A1 \
+                   --loupe-alignment=/home/ebarrozo/visium/docs/manual_image_alignments/V12M21-287-A1.json \
+                   --localcores=48 \
+                   --localmem=300
+
+spaceranger count --id=S34-manual \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53314 \
+                   --image=/home/ebarrozo/visium/docs/34.tif \
+                   --slide=V12M21-287 \
+                   --area=D1 \
+                   --loupe-alignment=/home/ebarrozo/visium/docs/manual_image_alignments/V12M21-287-D1.json \
+                   --localcores=48 \
+                   --localmem=300
+
+spaceranger count --id=S32-manual \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53312 \
+                   --image=/home/ebarrozo/visium/docs/32.tif \
+                   --slide=V12M21-287 \
+                   --area=B1 \
+                   --loupe-alignment=/home/ebarrozo/visium/docs/manual_image_alignments/V12M21-287-B1.json \
+                   --localcores=48 \
+                   --localmem=300
+## Auto image alignment
+
+spaceranger count --id=S31-auto \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53311 \
+                   --image=/home/ebarrozo/visium/docs/31.tif \
+                   --slide=V12M21-287 \
+                   --area=A1 \
+                   --localcores=48 \
+                   --localmem=300
+spaceranger count --id=S32-auto \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53312 \
+                   --image=/home/ebarrozo/visium/docs/32.tif \
+                   --slide=V12M21-287 \
+                   --area=B1 \
+                   --localcores=48 \
+                   --localmem=300
+
+
+spaceranger count --id=S33-auto \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53313 \
+                   --image=/home/ebarrozo/visium/docs/33.tif \
+                   --slide=V12M21-287 \
+                   --area=C1 \
+                   --localcores=48 \
+                   --localmem=300
+
+
+spaceranger count --id=S34-auto \
+                   --transcriptome=/media/jochum00/Aagaard_Raid2/ebarrozo/customrefs/mm10_and_NC_012532.1.v2 \
+                   --fastqs=/home/ebarrozo/visium/data/aagaard-6933_Visium/fastqfiles \
+                   --sample=KA_53314 \
+                   --image=/home/ebarrozo/visium/docs/34.tif \
+                   --slide=V12M21-287 \
+                   --area=D1 \
+                   --localcores=48 \
+                   --localmem=300
