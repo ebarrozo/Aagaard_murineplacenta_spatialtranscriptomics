@@ -17,6 +17,8 @@ S34-ZIKV-Veh-3
 
 GEO Contents: Spatial transcriptomics data are available at GEO Accession GSE205631. Use the 10x Genomics bam2fastq package for manual re-alignments. Processed .h5 matricies are also deposited. The script to generate the custom mouse + ZIKV reference (mm10_and_NC_012532.1.v2) is provided here.
 
+Downloading from GEO/SRA: For each sample, we have uploaded the 10x BAM file (possorted_genome_bam.bam) and processed count matrix (filtered_feature_bc_matrix.h5). Do not use fastq-dump or sam-dump to pull the data as the 10x Bam is different frum regular BAM files. The 10x BAM is different from regular BAM files, so the sam-dump option does not work. Please download the BAM file with the link in the 'Data access' --> 'Original format' section (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR23094132&display=data-access). Please see the 10x Genomics Support Page on the topic: https://kb.10xgenomics.com/hc/en-us/articles/360035250172-Why-do-I-not-see-any-FASTQs-or-incomplete-FASTQs-for-the-SRA-of-my-interest- . Then run bamtofastq (https://support.10xgenomics.com/docs/bamtofastq) in the CellRanger package to extract all the fastq files in the format necessary for CellRanger alignments. For example, 1 10x BAM produces 12 total fastq files.
+
 # Repository contents
 A) Images necessary for alignment of spatial transcriptomes
 
